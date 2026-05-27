@@ -117,25 +117,6 @@ export default function PortfolioLanding({
             ))}
           </nav>
 
-          {/* Login Button */}
-          {!isAuthenticated ? (
-            <button
-              onClick={() => setShowLogin(true)}
-              className="px-5 py-2 rounded-full bg-white/10 border border-white/10 text-white text-sm hover:bg-white/20 transition-all duration-300 backdrop-blur-md"
-            >
-              Admin Login
-            </button>
-          ) : (
-            <button
-              onClick={() => {
-                setIsAuthenticated(false);
-                localStorage.removeItem("token");
-              }}
-              className="px-5 py-2 rounded-full bg-red-500/20 border border-red-400/20 text-red-200 text-sm hover:bg-red-500/30 transition-all duration-300"
-            >
-              Logout
-            </button>
-          )}
         </div>
       </header>
 
